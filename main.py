@@ -11,42 +11,19 @@ log_init.initialize_logging()
 
 logger = logging.getLogger(__name__)
 
-import area.baaj
-import area.besaid
-import area.boats
-import area.djose
-import area.dream_zan
-import area.gagazet
-import area.guadosalam
-import area.home
-import area.kilika
-import area.luca
-import area.mac_temple
-import area.mac_woods
-import area.miihen
-import area.moonflow
-import area.mrr
-import area.ne_armor
-import area.rescue_yuna
-import area.sin
-import area.thunder_plains
 import area.zanarkand
 import battle.boss
-import battle.main
 import blitz
 import config
 import load_game
 import logs
 import memory.main
-import nemesis.arena_battles
-import nemesis.arena_prep
 import nemesis.changes
 import pathing
 import reset
 import rng_track
 import save_sphere
 import screen
-import vars
 import xbox
 from gamestate import game
 from image_to_text import maybe_show_image
