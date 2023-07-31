@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def retrieve_memory():
     logger.debug("Retrieving aVIna memory")
     filepath = os.path.join("json_ai_files", "aVIna_memory.json")
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         rng_values = json.load(fp)
     return rng_values
 

@@ -70,7 +70,7 @@ def get_contrasting_color(
         else:
             v = 0
     h = (h + 0.5) % 1
-    red, green, blue = [int(c * 255) for c in colorsys.hsv_to_rgb(h, s, v)]
+    red, green, blue = (int(c * 255) for c in colorsys.hsv_to_rgb(h, s, v))
 
     if return_string:
         return f"#{red:02x}{green:02x}{blue:02x}"

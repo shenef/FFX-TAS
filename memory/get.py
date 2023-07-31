@@ -13,7 +13,7 @@ base_value = 0
 
 class LocProcess(Process):
     def __init__(self, *args, **kwargs):
-        super(LocProcess, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def read_bytes(self, lp_base_address: int, size: int = 4):
         """
@@ -75,7 +75,7 @@ class LocProcess(Process):
 
 class FFXMemory(ReadWriteMemory):
     def __init__(self, *args, **kwargs):
-        super(FFXMemory, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.process = LocProcess()
 
     def get_process_by_name(self, process_name: str | bytes) -> "Process":

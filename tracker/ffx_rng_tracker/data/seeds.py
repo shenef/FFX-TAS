@@ -1,6 +1,6 @@
 import csv
 import os
-from typing import Iterable
+from collections.abc import Iterable
 
 from ..configs import Configs
 from ..errors import InvalidDamageValueError, SeedNotFoundError

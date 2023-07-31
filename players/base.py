@@ -1,6 +1,5 @@
 import logging
 from enum import IntEnum
-from typing import List, Optional
 
 import memory.main
 import xbox
@@ -34,7 +33,7 @@ class PlayerMagicNumbers(IntEnum):
 
 
 class Player:
-    def __init__(self, name: str, id: int, battle_menu: List[int]):
+    def __init__(self, name: str, id: int, battle_menu: list[int]):
         self.name = name
         self.id = id
         self.struct_offset = id * PlayerMagicNumbers.CHAR_STRUCT_SIZE
@@ -83,7 +82,7 @@ class Player:
 
     def _read_char_battle_offset_address(self, address, offset):
         return memory.main.read_val(
-            address + ((PlayerMagicNumbers.BATTLE_STRUCT_SIZE * offset))
+            address + (PlayerMagicNumbers.BATTLE_STRUCT_SIZE * offset)
         )
 
     def _read_char_battle_state_address(self, offset):
@@ -147,8 +146,8 @@ class Player:
 
     def attack(
         self,
-        target_id: Optional[int] = None,
-        direction_hint: Optional[str] = "u",
+        target_id: int | None = None,
+        direction_hint: str | None = "u",
         record_results: bool = False,
     ):
         skip_direction = False
@@ -201,8 +200,8 @@ class Player:
     def cast_black_magic_spell(
         self,
         spell_id: int,
-        target_id: Optional[int] = None,
-        direction: Optional[str] = None,
+        target_id: int | None = None,
+        direction: str | None = None,
     ):
         if target_id is None:
             logger.debug(f"Casting {spell_id}")
@@ -337,7 +336,7 @@ class Player:
         if self.id == 0:
             return 255
         return memory.main.read_val(
-            PlayerMagicNumbers.AFFECTION_POINTER + ((4 * self.id)), 1
+            PlayerMagicNumbers.AFFECTION_POINTER + (4 * self.id), 1
         )
 
     def _navigate_to_single_column_index(self, position, cursor):
@@ -347,7 +346,7 @@ class Player:
             else:
                 xbox.tap_up()
 
-    def next_crits(self, enemy_luck: int, length: int = 20) -> List[int]:
+    def next_crits(self, enemy_luck: int, length: int = 20) -> list[int]:
         # Note that this says the number of increments, so the previous roll
         # will be a hit, and this one will be the crit.
         results = []
@@ -474,7 +473,7 @@ class Player:
     def slvl(self) -> int:
         return self._read_char_offset_address(PlayerMagicNumbers.SLVL)
 
-    def armors(self) -> List[memory.main.Equipment]:
+    def armors(self) -> list[memory.main.Equipment]:
         equipments = memory.main.all_equipment()
         return [
             x
@@ -488,7 +487,7 @@ class Player:
     def equipped_armor(self) -> memory.main.Equipment:
         return [x for x in self.armors() if x.is_equipped()][0]
 
-    def weapons(self) -> List[memory.main.Equipment]:
+    def weapons(self) -> list[memory.main.Equipment]:
         equipments = memory.main.all_equipment()
         return [
             x
@@ -502,7 +501,7 @@ class Player:
     def equipped_weapon(self) -> memory.main.Equipment:
         return [x for x in self.weapons() if x.is_equipped()][0]
 
-    def _swap_battle(self, weapon: bool, ability: Optional[List[int]] = None):
+    def _swap_battle(self, weapon: bool, ability: list[int] | None = None):
         if weapon:
             menu_index = 0
             equip_func = self.weapons
@@ -527,7 +526,7 @@ class Player:
             xbox.tap_b()
 
     def swap_battle_weapon(
-        self, ability: Optional[List[int]] = None, named_equip: Optional[str] = None
+        self, ability: list[int] | None = None, named_equip: str | None = None
     ):
         if named_equip is not None:
             if named_equip == "baroque":
@@ -536,7 +535,7 @@ class Player:
                 ability = [32867, 32868, 32810, 32768]
         self._swap_battle(True, ability)
 
-    def swap_battle_armor(self, ability: Optional[List[int]] = None):
+    def swap_battle_armor(self, ability: list[int] | None = None):
         self._swap_battle(False, ability)
 
     def main_menu_index(self) -> int:

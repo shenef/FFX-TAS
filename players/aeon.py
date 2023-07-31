@@ -1,5 +1,4 @@
 import logging
-from typing import List
 
 import memory.main
 import xbox
@@ -9,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 
 class Aeon(Player):
-    def __init__(self, name: str, id: int, battle_menu: List[int]):
+    def __init__(self, name: str, id: int, battle_menu: list[int]):
         super().__init__(name, id, battle_menu)
         self.char_rng = 27
 

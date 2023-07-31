@@ -6,7 +6,6 @@ import struct
 import time
 from collections import Counter
 from math import cos, sin
-from typing import List
 
 from ReadWriteMemory import Process, ReadWriteMemory, ReadWriteMemoryError
 from tqdm import tqdm
@@ -35,7 +34,7 @@ base_value = 0
 
 class LocProcess(Process):
     def __init__(self, *args, **kwargs):
-        super(LocProcess, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def read_bytes(self, lp_base_address: int, size: int = 4):
         # See the original ReadWriteMemory values for details on how this works.
@@ -93,7 +92,7 @@ class LocProcess(Process):
 
 class FFXMemory(ReadWriteMemory):
     def __init__(self, *args, **kwargs):
-        super(FFXMemory, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.process = LocProcess()
 
     def get_process_by_name(self, process_name: str | bytes) -> "Process":
@@ -2422,7 +2421,7 @@ class Icicle:
 
 
 def build_icicles():
-    ret_array: List[Icicle] = [Icicle(x) for x in range(16)]
+    ret_array: list[Icicle] = [Icicle(x) for x in range(16)]
     return ret_array
 
 
@@ -4130,7 +4129,7 @@ def ambushes(advances: int = 12, extra: int = 0):
     return ret_array
 
 
-def rikku_mix_damage() -> List[int]:
+def rikku_mix_damage() -> list[int]:
     initial_rng_vals = rng_array_from_index(index=26, array_len=9)
     dmg_rng = [(x & 31) + 0xF0 for x in initial_rng_vals[1:]]
     base_dmg = 18 * 50

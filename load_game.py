@@ -57,7 +57,7 @@ def load_into_game(gamestate: str, step_counter: str):
 
     # Now to get details for the load/save files
     filepath = os.path.join("json_ai_files", "save_load_details.json")
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         results = json.load(fp)
 
     # Try to use new method, otherwise try old method.
@@ -147,7 +147,7 @@ def load_into_game_old(gamestate: str, step_counter: str):
 
     # Now to tell the user where they went wrong:
     filepath = os.path.join("json_ai_files", "save_load_details.json")
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         results = json.load(fp)
     try:
         if len(results[gamestate]) >= 1:

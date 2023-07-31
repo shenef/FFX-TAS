@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class AreaMovementBase(object):
+class AreaMovementBase:
     checkpoint_fallback = {}
 
     @classmethod

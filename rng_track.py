@@ -112,7 +112,7 @@ def drop_ability_list(enemy: str = "ghost", equip_type: int = 0):
 
 
 def early_battle_count():
-    with open("csv\\seed_battle_variance.csv", "r", newline="") as csv_file:
+    with open("csv\\seed_battle_variance.csv", newline="") as csv_file:
         reader = csv.DictReader(csv_file)
         for row in reader:
             if int(row["Seed"]) == memory.main.rng_seed():
@@ -1843,7 +1843,7 @@ def hit_chance_table(index: int):
 
 def oblitz_history():
     filepath = os.path.join("json_ai_files", "oblitz_results.json")
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         rng_values = json.load(fp)
     return rng_values
 
@@ -1954,7 +1954,7 @@ def record_blitz_results(duration, test_mode=False):
 
 
 def hits_to_seed(hits_array: int):
-    with open("csv\\hits_to_seed.csv", "r", newline="") as csv_file:
+    with open("csv\\hits_to_seed.csv", newline="") as csv_file:
         reader = csv.DictReader(csv_file)
         for row in reader:
             if row["hit0"] == "":

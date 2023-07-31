@@ -31,7 +31,7 @@ def timer_decorator(func):
     return wrapper
 
 
-class ImageToText(object):
+class ImageToText:
     # gray scale level values from:
     # http://paulbourke.net/dataformats/asciiart/
     # 70 levels of gray

@@ -1,7 +1,6 @@
 import datetime
 import logging
 import time
-from typing import Optional
 
 import config
 
@@ -136,7 +135,7 @@ def initialize_logging():
 
 # Method for adding a custom log level. Adapted from:
 # https://stackoverflow.com/questions/2183233/how-to-add-a-custom-loglevel-to-pythons-logging-facility/35804945#35804945
-def _add_log_level(level_name: str, level_num: int, method_name: Optional[str] = None):
+def _add_log_level(level_name: str, level_num: int, method_name: str | None = None):
     """
     Comprehensively adds a new logging level to the `logging` module and the
     currently configured logging class.

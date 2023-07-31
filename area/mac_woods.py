@@ -1,5 +1,4 @@
 import logging
-from typing import List
 
 import battle.boss
 import battle.main
@@ -22,7 +21,7 @@ game_vars = vars.vars_handle()
 FFXC = xbox.controller_handle()
 
 
-def wait_for_rng2_weakness(valid_weakness: List[int]):
+def wait_for_rng2_weakness(valid_weakness: list[int]):
     prev_rng2_prediction = None
     while True:
         cur_next_rng2 = memory.main.get_next_rng2()
@@ -40,7 +39,7 @@ def wait_for_rng2_weakness(valid_weakness: List[int]):
             return
 
 
-def calculate_possible_weaknesses() -> List[int]:
+def calculate_possible_weaknesses() -> list[int]:
     items_contained = []
     for i, item_val in enumerate([27, 24, 30, 32]):
         if memory.main.get_use_items_slot(item_val) != 255:

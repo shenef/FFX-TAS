@@ -2,7 +2,6 @@ import logging
 import math
 import random
 import time
-from typing import List
 
 import blitz_pathing
 import logs
@@ -19,7 +18,7 @@ tidus_xp = False
 FFXC = xbox.controller_handle()
 
 report_state = False
-player_array: List[BlitzActor] = []
+player_array: list[BlitzActor] = []
 
 # Initialize the player array
 for i in range(12):

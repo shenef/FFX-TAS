@@ -3,7 +3,6 @@ import logging
 import os
 import random
 import subprocess
-from typing import Dict
 
 import yaml
 from twitchio.ext import commands
@@ -26,7 +25,7 @@ CONFIG_FILE_PATH = "bot-config.yaml"
 
 def oblitz_history():
     filepath = os.path.join("json_ai_files", "oblitz_results.json")
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         rng_values = json.load(fp)
     return rng_values
 
@@ -48,7 +47,7 @@ class BotConfig:
 
 # Define the bot
 class Bot(commands.Bot):
-    def __init__(self, config: Dict):
+    def __init__(self, config: dict):
         token: str = config.get("token", "YOUR_TOKEN_HERE")
         channels: str = config.get("channels", ["YOUR_CHANNEL_NAME"])
         # Define the users who are allowed to send commands
