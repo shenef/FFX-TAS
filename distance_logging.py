@@ -57,7 +57,6 @@ def perform_distance_logging():
         # write_everything
         with open("./json_ai_files/distance_logging.json", "w") as fp:
             json.dump(distances, fp)
-        return
 
     monitoring = threading.Thread(target=_monitor, daemon=True)
     monitoring.start()
