@@ -10,9 +10,9 @@ import save_sphere
 import tts
 import vars
 import xbox
+from json_ai_files.write_seed import write_seed_num
 from paths import AllStartsHere, TidusHomeMovement
 from players import Auron, CurrentPlayer
-from json_ai_files.write_seed import write_seed_num
 
 game_vars = vars.vars_handle()
 

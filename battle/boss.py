@@ -7,6 +7,8 @@ import memory.main
 import screen
 import vars
 import xbox
+from area.gagazet import check_gems
+from battle import avina_memory
 from players import (
     Auron,
     Bahamut,
@@ -19,8 +21,6 @@ from players import (
     Wakka,
     Yuna,
 )
-from battle import avina_memory
-from area.gagazet import check_gems
 
 FFXC = xbox.controller_handle()
 game_vars = vars.vars_handle()

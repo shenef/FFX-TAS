@@ -1,14 +1,14 @@
 # currently unused file, should be removed if abandoned
 import time
 
+import area.dream_zan
 import area.luca
 import blitz
 import load_game
 import memory.main
 import reset
-import xbox
-import area.dream_zan
 import save_sphere
+import xbox
 
 FFXC = xbox.controller_handle()
 

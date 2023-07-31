@@ -1,4 +1,5 @@
 import logging
+import random
 
 import battle.boss
 import battle.main
@@ -9,7 +10,6 @@ import save_sphere
 import screen
 import vars
 import xbox
-import random
 from paths import (
     MacalaniaTempleApproach,
     MacalaniaTempleEscape,

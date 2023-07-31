@@ -1,11 +1,8 @@
 # Libraries and Core Files
+import argparse
 import logging
 import random
 import sys
-import argparse
-
-# This needs to be before the other imports in case they log things when imported
-import log_init
 
 import area.baaj
 import area.besaid
@@ -33,6 +30,9 @@ import battle.main
 import blitz
 import config
 import load_game
+
+# This needs to be before the other imports in case they log things when imported
+import log_init
 import logs
 import memory.main
 import nemesis.advanced_farm

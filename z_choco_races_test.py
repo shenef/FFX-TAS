@@ -1,6 +1,5 @@
 # Libraries and Core Files
 import logging
-import log_init
 
 import area.baaj
 import area.besaid
@@ -24,13 +23,14 @@ import area.sin
 import area.thunder_plains
 import area.zanarkand
 import load_game
+import log_init
 import memory.main
 import nemesis.advanced_farm
 import nemesis.arena_battles
 import nemesis.arena_prep
 import nemesis.changes
-import xbox
 import reset
+import xbox
 
 # This sets up console and file logging (should only be called once)
 log_init.initialize_logging()

@@ -1,7 +1,7 @@
 import logging
 
-import battle.main
 import battle.boss
+import battle.main
 import logs
 import memory.get
 import memory.main

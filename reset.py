@@ -3,9 +3,9 @@ import logging
 
 import logs
 import memory.main
-from memory.main import user_control, turn_ready, battle_wrap_up_active
 import vars
 import xbox
+from memory.main import battle_wrap_up_active, turn_ready, user_control
 
 logger = logging.getLogger(__name__)
 game_vars = vars.vars_handle()
@@ -79,15 +79,15 @@ def _attempt_reset():
     if memory.main.s_grid_active():
         logger.debug("Reset: S-grid open")
         from menu_grid import (
-            ready_use_sphere,
             first_position,
-            quit_grid_ready,
-            move_use_menu,
-            move_ready,
             move_active,
             move_complete,
-            use_ready,
+            move_ready,
+            move_use_menu,
+            quit_grid_ready,
             ready_select_sphere,
+            ready_use_sphere,
+            use_ready,
         )
 
         while memory.main.s_grid_active():

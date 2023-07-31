@@ -1,14 +1,14 @@
 import logging
 import time
 
+import battle.main
 import memory.main
+import menu
 import pathing
 import vars
 import xbox
 from paths import GuadoSkip, GuadoStart, GuadoStoryline
 from players import Auron, Lulu, Rikku, Wakka, Yuna
-import battle.main
-import menu
 
 logger = logging.getLogger(__name__)
 game_vars = vars.vars_handle()

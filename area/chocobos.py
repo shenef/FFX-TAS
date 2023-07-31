@@ -1,10 +1,10 @@
 import logging
+import math
 
 import battle.main
 import memory.main
 import pathing
 import xbox
-import math
 from paths.nem import Race1, Race2, Race3, ToRemiem
 
 FFXC = xbox.controller_handle()

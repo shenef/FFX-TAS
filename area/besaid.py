@@ -6,12 +6,12 @@ import logs
 import memory.main
 import menu
 import pathing
+import save_sphere
 import screen
 import vars
 import xbox
 from paths import Besaid1, Besaid2, BesaidTrials
 from players import Lulu, Tidus, Wakka, Yuna
-import save_sphere
 
 FFXC = xbox.controller_handle()
 game_vars = vars.vars_handle()

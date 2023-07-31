@@ -7,7 +7,7 @@ import memory.main
 import menu_grid
 import vars
 import xbox
-from players import Auron, Rikku, Tidus, Wakka, Yuna, Lulu
+from players import Auron, Lulu, Rikku, Tidus, Wakka, Yuna
 
 game_vars = vars.vars_handle()
 

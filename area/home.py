@@ -1,5 +1,6 @@
 import logging
 import math
+import random
 
 import battle.main
 import memory.main
@@ -8,9 +9,8 @@ import pathing
 import save_sphere
 import vars
 import xbox
-import random
 from paths import BikanelDesert, BikanelHome
-from players import Auron, Kimahri, Rikku, Tidus, Wakka, Lulu
+from players import Auron, Kimahri, Lulu, Rikku, Tidus, Wakka
 
 logger = logging.getLogger(__name__)
 game_vars = vars.vars_handle()

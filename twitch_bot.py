@@ -1,12 +1,12 @@
-from twitchio.ext import commands
-import subprocess
-import random
-import os
 import json
+import logging
+import os
+import random
+import subprocess
+from typing import Dict
 
 import yaml
-import logging
-from typing import Dict
+from twitchio.ext import commands
 
 logger = logging.getLogger(__name__)
 

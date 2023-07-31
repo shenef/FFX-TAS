@@ -11,6 +11,7 @@ import save_sphere
 import screen
 import vars
 import xbox
+from area.ne_armor import next_green
 from paths import (
     CalmLands,
     DefenderX,
@@ -23,7 +24,6 @@ from paths import (
     SeymourFlux,
 )
 from players import Auron, CurrentPlayer, Kimahri, Rikku, Tidus, Wakka, Yuna
-from area.ne_armor import next_green
 
 logger = logging.getLogger(__name__)
 game_vars = vars.vars_handle()

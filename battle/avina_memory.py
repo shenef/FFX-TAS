@@ -1,6 +1,7 @@
 import json
-import os
 import logging
+import os
+
 from jsonmerge import merge
 
 logger = logging.getLogger(__name__)

@@ -373,8 +373,7 @@ def kilika_rng_manip():
 
 
 def mrr_crit():
-    from memory.main import next_crit
-    from memory.main import advance_rng_index
+    from memory.main import advance_rng_index, next_crit
 
     escape_count = 0
     while next_crit(character=3, char_luck=18, enemy_luck=15) != 1:

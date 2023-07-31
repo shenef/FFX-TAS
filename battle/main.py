@@ -11,8 +11,7 @@ import screen
 import vars
 import xbox
 from battle import avina_memory
-from memory.main import s32
-from memory.main import future_attack_will_crit
+from memory.main import future_attack_will_crit, s32
 from players import (
     Auron,
     Bahamut,

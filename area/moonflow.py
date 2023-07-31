@@ -3,13 +3,13 @@ import logging
 import battle.boss
 import battle.main
 import memory.main
-from memory.main import get_item_slot, get_item_count_slot
 import menu
 import pathing
 import screen
 import vars
 import xbox
 from battle import avina_memory
+from memory.main import get_item_count_slot, get_item_slot
 from paths import Moonflow1, MoonflowBankNorth, MoonflowBankSouth
 from players import Auron, Tidus, Wakka
 

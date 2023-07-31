@@ -1,13 +1,13 @@
 import logging
 
 import battle.main
-from battle import avina_memory
 import memory.main
-from memory.main import wait_frames, actor_index, get_actor_coords, get_coords
 import pathing
-from paths import MRRSkip
 import vars
 import xbox
+from battle import avina_memory
+from memory.main import actor_index, get_actor_coords, get_coords, wait_frames
+from paths import MRRSkip
 from players import Auron, Kimahri, Tidus, Wakka
 
 logger = logging.getLogger(__name__)

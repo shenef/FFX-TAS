@@ -1,5 +1,6 @@
 import logging
 import math
+import random
 import time
 from typing import List
 
@@ -9,7 +10,6 @@ import memory.main
 import rng_track
 import vars
 import xbox
-import random
 from memory.main import BlitzActor
 
 logger = logging.getLogger(__name__)

@@ -1,5 +1,5 @@
 # This needs to be before import clr
-from pythonnet import load
+from pythonnet import load  # noqa: I001
 
 import sys
 import clr

@@ -1,34 +1,33 @@
+import json
 import logging
-
 
 import battle.boss
 import battle.main
 import battle.utils
 import memory.main
-from memory.main import get_map
 import menu
 import nemesis.arena_select
 import nemesis.menu
-from nemesis.arena_prep import (
-    air_ship_destination,
-    return_to_airship,
-    rin_equip_dump,
-    battle_farm_all,
-    advanced_battle_logic,
-    yojimbo_dialog,
-)
 import pathing
 import rng_track
 import save_sphere
 import vars
 import xbox
+from memory.main import get_map
+from nemesis.arena_prep import (
+    advanced_battle_logic,
+    air_ship_destination,
+    battle_farm_all,
+    return_to_airship,
+    rin_equip_dump,
+    yojimbo_dialog,
+)
 from paths.nem import (
     BikanelFarm,
     CalmFarm,
     DjoseFarm,
-    GagazetMtPathFarm,
     GagazetCaveFarm,
-    ZanarkandFarm2,
+    GagazetMtPathFarm,
     KilikaFarm,
     MacFarm,
     MiihenFarm,
@@ -36,9 +35,9 @@ from paths.nem import (
     SinFarm,
     ThunderPlainsFarm,
     YojimboFarm,
+    ZanarkandFarm2,
 )
 from players import Lulu, Rikku, Tidus, Wakka, Yuna
-import json
 
 logger = logging.getLogger(__name__)
 game_vars = vars.vars_handle()
