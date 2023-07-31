@@ -30,7 +30,6 @@ def _move_file(name, src_dir, dest_dir, mod_time):
     dest_full_path = os.path.join(dest_dir, name)
     shutil.copy(src_full_path, dest_full_path)
     os.utime(dest_full_path, (mod_time, mod_time))
-    return
 
 
 def check_flags():
@@ -42,8 +41,10 @@ def check_flags():
 
 def setup_saves():
     """Moves the TAS saves to the correct location."""
-    square_saves = f"{FLAGS.user_path or os.path.expanduser('~')}"
-    +"\\Documents\\SQUARE ENIX\\FINAL FANTASY X&X-2 HD Remaster\\FINAL FANTASY X\\"
+    square_saves = (
+        f"{FLAGS.user_path or os.path.expanduser('~')}"
+        + "\\Documents\\SQUARE ENIX\\FINAL FANTASY X&X-2 HD Remaster\\FINAL FANTASY X\\"
+    )
     tas_saves = ".\\tas_saves"
     print(f"Copying save files from '{square_saves}' to '.\\Save Backups'")
     shutil.copytree(square_saves, ".\\Save Backups")
@@ -68,8 +69,10 @@ def setup_saves():
 
 def restore_saves():
     """Restores the backed up saves."""
-    square_saves = f"{FLAGS.user_path or os.path.expanduser('~')}"
-    +"\\Documents\\SQUARE ENIX\\FINAL FANTASY X&X-2 HD Remaster\\FINAL FANTASY X\\"
+    square_saves = (
+        f"{FLAGS.user_path or os.path.expanduser('~')}"
+        + "\\Documents\\SQUARE ENIX\\FINAL FANTASY X&X-2 HD Remaster\\FINAL FANTASY X\\"
+    )
     shutil.rmtree(square_saves)
     shutil.copytree(".\\Save Backups", square_saves)
     shutil.rmtree(".\\Save Backups")

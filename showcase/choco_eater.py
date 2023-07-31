@@ -1,3 +1,5 @@
+import sys
+
 import memory.main
 import pathing
 import xbox
@@ -52,4 +54,4 @@ def battle():
     xbox.tap_b()
     xbox.tap_b()
     xbox.tap_b()
-    exit()
+    sys.exit()

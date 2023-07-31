@@ -182,7 +182,6 @@ def wait_frames(frames: int):
             final = final - previous
         previous = current
         current = process.read_bytes(key, 4)
-    return
 
 
 def rng_seed():
@@ -4466,7 +4465,7 @@ def arena_array():
 def arena_farm_check(
     zone: str = "besaid", end_goal: int = 10, report=False, return_array=False
 ):
-    import nemesis.menu as menu
+    from nemesis import menu
 
     complete = True
     zone = zone.lower()

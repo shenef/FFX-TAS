@@ -2,6 +2,7 @@
 import json
 import logging
 import os
+import sys
 from pathlib import Path
 
 import airship_pathing
@@ -163,7 +164,7 @@ def load_into_game_old(gamestate: str, step_counter: str):
             #    logger.warning(str(results[key][x]) + " | ")
 
     logger.error("TAS terminating")
-    exit(1)
+    sys.exit(1)
 
 
 def get_saved_files():
@@ -217,7 +218,7 @@ def load_save_num(number):
         memory.main.reset_battle_end()
     else:
         logger.error("That save file does not exist. Quitting program.")
-        exit()
+        sys.exit()
 
 
 def load_first():
@@ -630,7 +631,7 @@ def load_guado_skip():
     FFXC.set_movement(0, -1)
     memory.main.wait_frames(30 * 1)
     FFXC.set_neutral()
-    import area.guadosalam as guadosalam
+    from area import guadosalam
 
     guadosalam.after_speech(checkpoint=26)
 

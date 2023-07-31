@@ -291,7 +291,6 @@ def report_dropped_item(
     report=False,
 ):
     abi_str = str(pref_ability)
-    pref_type
     report = True
     if pref_ability != 255 and abi_str not in drop.equip_abilities:
         report = False
@@ -987,7 +986,7 @@ def t_strike_tracking_not_working_yet(tros=False, report=False):
         area="kilika_woods", battle_count=3, extra_advances=advance_01
     )
     logs.write_rng_track("Kilika battles:")
-    import area.kilika as kilika
+    from area import kilika
 
     best_battle = kilika.select_best_of_two(kilika_battles)
     ragora_kills = [0, 0, 0]
@@ -1614,7 +1613,7 @@ def zombie_track(report=False):
     advance_10 += 3
     advance_01 += 1
 
-    import area.zanarkand as zanarkand
+    from area import zanarkand
 
     zanarkand.decide_nea(bonus_advance=1)
     # One death expected to recharge Rikku. No drops expected.
