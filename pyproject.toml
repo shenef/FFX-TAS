@@ -5,4 +5,10 @@ select = [
   "F",   # pyflakes
   "I",   # isort
   "UP",  # pyupgrade
+  "PERF", # Perflint
+  "PLR1711", # Useless return statement at end of function
+  "PLR1722", # Use sys.exit() instead of {name}
+  "PLR0402", # Use from {module} import {name} in lieu of alias
+  "B018", # Found useless expression. Either assign it to a variable or remove it.
+  "B015", # Pointless comparison. This comparison does nothing but waste CPU instructions. Either prepend `assert` or remove it.
 ]
